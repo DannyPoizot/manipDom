@@ -1,0 +1,14 @@
+h1 {
+  border: 1px black solid;
+  border-radius: 5px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 50%;
+  object-fit: cover;
+}
