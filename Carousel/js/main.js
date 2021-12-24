@@ -1,3 +1,5 @@
+"use strict";
+
 // All html collects elements 
 let elemList = document.getElementsByTagName('li');
 let prev = document.querySelector('.prev_btn');
