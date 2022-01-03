@@ -14,54 +14,66 @@ let P1 = 0;
 let P2 = 0;
 let total = 0;
 
+player1.addEventListener('click', scoreP1);
+player2.addEventListener('click', scoreP2);
 
-if (total == "0") {
+let one = document.querySelector('.one');
+let two = document.querySelector('.two');
+
+if (total == 0) {
     player1.disabled = true;
     player2.disabled = true;
 }
 
 function number() {
-    currentNb.textContent = "Playing to : " + this.value;
     total = Number(this.value);
+    currentNb.textContent =  total;
     player1.disabled = false;
     player2.disabled = false;
 
 }
 
 function scoreP1() {
-    if( P1 === total) {
-        player1.disabled = true;
-        player2.disabled = true;
-    }
-    player1.textContent = P1;
+    P1++;
+    one.textContent = P1;
+    win();
 }
-player1.addEventListener('click', scoreP1);
 
 function scoreP2() {
-    if( P1 === total) {
-        player1.disabled = true;
-        player2.disabled = true;
-    }
-    player1.textContent = P2;
+    P2++;
+    two.textContent = P2;
+    win();
 }
-player2.addEventListener('click', scoreP2);
 
 function res() {
-    
-    player1.textContent = 0;
-    player2.textContent = 0;
     input.value = 0;
     total = 0;
+    currentNb.textContent = total;
+    P1 = 0;
+    P2 = 0;
+    one.textContent = P1;
+    two.textContent = P2; 
+    win();
+    player1.classList.remove("winner"); 
+    player2.classList.remove("winner"); 
+}
 
-    if (total == "0") {
+reset.addEventListener('click', res);
+
+function win() {
+    if(P1 == total) {
         player1.disabled = true;
         player2.disabled = true;
-        score.textContent = player1 + "to" + player2;
+        player1.classList.add("winner"); 
+    } else if(P2 == total){
+        player2.classList.add("winner"); 
+        player1.disabled = true;
+        player2.disabled = true;
+
     } else {
+
         player1.disabled = false;
         player2.disabled = false;
     }
     
 }
-
-reset.addEventListener('click', res);
