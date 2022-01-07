@@ -16,8 +16,8 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/sass/main.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -28,7 +28,45 @@
   <h1>Monster Slayer</h1>
   
   <section>
+    <article>
+
+      <p>YOU</p>
+      <span class="pvPlayer"></span> Pv
+      <div class="bar">
+        <div class="progressPlayer progress"></div>
+      </div>
+
+    </article>
+
+    <article>
+
+      <p>MONSTER</p>
+      <span class="pvMonster"></span> Pv
+      <div class="bar">
+        <div class="progressMonster progress"></div>
+      </div>
+
+    </article>
     
+  </section>
+
+  
+  <section class="sectionStart"></section>
+  
+    <button id="sectionStart_btn">Start game</button>
+
+  </section>
+
+  <section class="sectionGame">
+
+    <button id="sectionGame_btn__attack">Attack</button>
+
+    <button id="sectionGame_btn__special">Special Attack</button>
+
+    <button id="sectionGame_btn__heal">Heal</button>
+
+    <button id="sectionGame_btn__giveup">Give Up</button>
+
   </section>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>

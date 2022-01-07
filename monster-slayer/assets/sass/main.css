@@ -1,1 +1,12 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.bar {
+  width: 500px;
+  height: 20px;
+  background-color: grey;
+}
+
+.progress {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+}
+/*# sourceMappingURL=main.css.map */
