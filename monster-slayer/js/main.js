@@ -27,8 +27,7 @@ btnHeal.addEventListener('click', heal);
 btnGiveUp.addEventListener('click', giveUp);
 
 
-function hideClickBtn(e) {
-    e.stopPropagation();
+function hideClickBtn() {
     pvPlayer.textContent = pvP;
     pvMonster.textContent = pvM;
     sectionGame.hidden = false;
