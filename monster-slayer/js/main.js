@@ -6,11 +6,11 @@ const progressPlayer = document.querySelector('.progressPlayer');
 const progressMonster = document.querySelector('.progressMonster');
 const pvPlayer = document.querySelector('.pvPlayer');
 const pvMonster = document.querySelector('.pvMonster');
-const btnStart = document.getElementById("sectionStart_btn");
-const btnAttack = document.getElementById("sectionGame_btn__attack");
-const btnSpecialAttack = document.getElementById("sectionGame_btn__special");
-const btnHeal = document.getElementById("sectionGame_btn__heal");
-const btnGiveUp = document.getElementById("sectionGame_btn__giveup");
+const btnStart = document.getElementById("btn_start");
+const btnAttack = document.getElementById("btn_attack");
+const btnSpecialAttack = document.getElementById("btn_special");
+const btnHeal = document.getElementById("btn_heal");
+const btnGiveUp = document.getElementById("btn_giveup");
 
 let pvP = 100;
 let pvM = 100;
@@ -60,7 +60,6 @@ function specialAttack() {
 
 function heal() {
     pvP += 10;
-    afficher("heal");
     pvP = pvP - damage(5, 10);
     endGame();
 } 

@@ -1,11 +1,44 @@
+h1 {
+    text-align: center;
+}
+
+.sectionStart, .sectionGame {
+    text-align: center;
+    margin-top: 20px;
+    & button {
+        margin-right: 10px;
+        padding: 5px;
+    }
+}
+
 .bar {
+    margin: auto;
     width: 500px;
     height: 20px;
     background-color: grey;
+    & .progress {
+        width: 100%;
+        height: 100%;
+        background-color: green;
+    }
 }
 
-.progress {
-    width: 100%;
-    height: 100%;
-    background-color: green;
+.articles {
+    display: grid;
+    grid-template-columns: repeat(4) 1fr;
+    grid-template-rows: 1fr;    
+    gap: 0px 0px;
+    grid-template-areas:
+    ". you monster .";
+    & .monster {
+        grid-area: monster;
+        text-align: center;
+    }
+    & .you {
+        grid-area: you;
+        text-align: center;
+    }
 }
+
+
+
